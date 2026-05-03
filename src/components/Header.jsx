@@ -29,7 +29,6 @@ const Header = () => {
         justifyContent: 'space-between',
         height: '64px'
       }}>
-        {/* Logo */}
         <a href="#" style={{
           display: 'inline-flex',
           alignItems: 'center',
@@ -49,8 +48,6 @@ const Header = () => {
             marginLeft: '1px'
           }} />
         </a>
-
-        {/* Desktop Nav */}
         <nav style={{
           display: 'flex',
           alignItems: 'center',
@@ -100,16 +97,12 @@ const Header = () => {
           <a href="#pricing" style={navLinkStyle}>Pricing</a>
           <a href="#contact" style={navLinkStyle}>Contact</a>
         </nav>
-
-        {/* Actions */}
         <div style={{ display: 'flex', alignItems: 'center', gap: '16px' }} className="desktop-nav">
           <a href="#" style={navLinkStyle}>Sign In</a>
           <a href="#contact" className="btn-primary">
             Request a Demo
           </a>
         </div>
-
-        {/* Mobile Menu Button */}
         <button
           className="mobile-menu-btn"
           style={{ display: 'none', background: 'none', padding: '8px', color: 'var(--color-ink)' }}
@@ -119,8 +112,6 @@ const Header = () => {
           {mobileOpen ? <X size={24} /> : <Menu size={24} />}
         </button>
       </div>
-
-      {/* Mobile Nav */}
       {mobileOpen && (
         <div className="mobile-nav" style={{
           display: 'none',

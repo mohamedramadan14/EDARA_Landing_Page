@@ -7,7 +7,6 @@
 }
 
 :root {
-  /* Cal.com Colors */
   --color-primary: #111111;
   --color-primary-active: #242424;
   --color-brand-accent: #3b82f6;
@@ -27,27 +26,19 @@
   --color-on-dark: #ffffff;
   --color-on-dark-soft: #a1a1aa;
   --color-success: #10b981;
-
-  /* Typography */
   --font-display: 'Cal Sans', 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
   --font-body: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-
-  /* Spacing */
   --spacing-section: 96px;
   --spacing-xxl: 48px;
   --spacing-xl: 32px;
   --spacing-lg: 24px;
   --spacing-md: 16px;
-
-  /* Border Radius */
   --rounded-sm: 6px;
   --rounded-md: 8px;
   --rounded-lg: 12px;
   --rounded-xl: 16px;
   --rounded-pill: 9999px;
   --rounded-full: 9999px;
-
-  /* Shadows */
   --shadow-sm: 0 1px 2px rgba(0,0,0,0.05);
   --shadow-md: 0 4px 12px rgba(0,0,0,0.08);
   --shadow-card: 0 0 0 1px rgba(0,0,0,0.03), 0 2px 8px rgba(0,0,0,0.04);
@@ -92,22 +83,16 @@ button {
 input, textarea, select {
   font-family: inherit;
 }
-
-/* Container */
 .container {
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 var(--spacing-lg);
 }
-
-/* Section */
 .section {
   padding: var(--spacing-section) 0;
   scroll-margin-top: 88px;
 }
-
-/* Typography Classes */
 .display-xl {
   font-family: var(--font-display);
   font-size: clamp(40px, 5vw, 64px);
@@ -192,8 +177,6 @@ input, textarea, select {
   line-height: 1.4;
   color: var(--color-muted);
 }
-
-/* Button Primary */
 .btn-primary {
   display: inline-flex;
   align-items: center;
@@ -216,8 +199,6 @@ input, textarea, select {
 .btn-primary:active {
   background: var(--color-primary-active);
 }
-
-/* Button Secondary */
 .btn-secondary {
   display: inline-flex;
   align-items: center;
@@ -236,8 +217,6 @@ input, textarea, select {
   transition: background 0.2s ease;
   cursor: pointer;
 }
-
-/* Badge Pill */
 .badge-pill {
   display: inline-block;
   padding: 4px 12px;
@@ -249,15 +228,11 @@ input, textarea, select {
   background: var(--color-surface-card);
   border-radius: var(--rounded-pill);
 }
-
-/* Feature Card */
 .feature-card {
   background: var(--color-surface-card);
   border-radius: var(--rounded-lg);
   padding: var(--spacing-xl);
 }
-
-/* Input */
 .text-input {
   width: 100%;
   padding: 10px 14px;
@@ -276,8 +251,6 @@ input, textarea, select {
 .text-input:focus {
   border-color: var(--color-ink);
 }
-
-/* Marquee */
 @keyframes marquee-scroll {
   0% {
     transform: translateX(0);
@@ -330,15 +303,11 @@ input, textarea, select {
     animation-duration: 0.01ms;
   }
 }
-
-/* Reduced Motion */
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
   }
 }
-
-/* Responsive */
 @media (max-width: 1024px) {
   .section {
     padding: 64px 0;

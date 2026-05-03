@@ -13,7 +13,6 @@ const Footer = () => {
           gridTemplateColumns: '2fr 1fr 1fr 1fr',
           gap: '48px'
         }}>
-          {/* Brand */}
           <div style={{ maxWidth: '340px' }}>
             <div style={{
               display: 'inline-flex',
@@ -84,8 +83,6 @@ const Footer = () => {
               ))}
             </div>
           </div>
-
-          {/* Product */}
           <div>
             <h4 className="title-sm" style={{ color: 'var(--color-on-dark)', marginBottom: '24px' }}>Product</h4>
             <ul style={{ listStyle: 'none', display: 'flex', flexDirection: 'column', gap: '14px' }}>
@@ -101,8 +98,6 @@ const Footer = () => {
               ))}
             </ul>
           </div>
-
-          {/* Company */}
           <div>
             <h4 className="title-sm" style={{ color: 'var(--color-on-dark)', marginBottom: '24px' }}>Company</h4>
             <ul style={{ listStyle: 'none', display: 'flex', flexDirection: 'column', gap: '14px' }}>
@@ -118,8 +113,6 @@ const Footer = () => {
               ))}
             </ul>
           </div>
-
-          {/* Legal */}
           <div>
             <h4 className="title-sm" style={{ color: 'var(--color-on-dark)', marginBottom: '24px' }}>Legal</h4>
             <ul style={{ listStyle: 'none', display: 'flex', flexDirection: 'column', gap: '14px' }}>

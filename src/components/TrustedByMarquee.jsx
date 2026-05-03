@@ -1,6 +1,6 @@
 import React from 'react';
 
-// SVG logos for popular companies
+
 const logos = [
   { name: 'Talabat', svg: (
     <svg viewBox="0 0 120 40" height="40">
