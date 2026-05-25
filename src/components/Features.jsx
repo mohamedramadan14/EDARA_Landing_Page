@@ -1,4 +1,3 @@
-import React from 'react';
 import { Check } from 'lucide-react';
 
 const features = [
@@ -48,9 +47,20 @@ const features = [
 
 const Features = () => {
   return (
-    <>
-      {features.map((feature) => (
-        <section key={feature.id} id={feature.id} className="section" style={{ paddingTop: '60px', paddingBottom: '60px' }}>
+    <div id="modules">
+      {features.map((feature, featureIdx) => (
+        <section
+          key={feature.id}
+          id={feature.id}
+          className="section"
+          style={{
+            paddingTop: featureIdx === 0 ? '96px' : '64px',
+            paddingBottom: featureIdx === features.length - 1 ? '96px' : '64px',
+            background: featureIdx % 2 === 0 ? 'var(--color-bg)' : 'var(--color-surface)',
+            borderTop: featureIdx === 0 ? '1px solid var(--color-border)' : 'none',
+            borderBottom: featureIdx < features.length - 1 ? '1px solid var(--color-border)' : 'none'
+          }}
+        >
           <div className="container">
             <div
               className="feature-grid"
@@ -63,10 +73,10 @@ const Features = () => {
               }}
             >
               <div style={{ direction: 'ltr', maxWidth: '480px' }}>
-                <span className="badge-pill" style={{ marginBottom: '16px' }}>
+                <span className="badge-pill" style={{ marginBottom: '16px', display: 'inline-block' }}>
                   {feature.eyebrow}
                 </span>
-                <h2 className="display-md" style={{ marginTop: '16px', marginBottom: '16px' }}>
+                <h2 className="display-md" style={{ marginTop: '12px', marginBottom: '16px' }}>
                   {feature.title}
                 </h2>
                 <p className="body-md" style={{ marginBottom: '24px' }}>
@@ -83,23 +93,23 @@ const Features = () => {
                     <li key={idx} style={{
                       display: 'flex',
                       alignItems: 'flex-start',
-                      gap: '10px',
-                      fontSize: '16px',
+                      gap: '12px',
+                      fontSize: '15px',
                       fontWeight: 500,
-                      color: 'var(--color-ink)',
+                      color: 'var(--color-text)',
                       fontFamily: 'var(--font-body)'
                     }}>
                       <span style={{
                         display: 'inline-flex',
                         alignItems: 'center',
                         justifyContent: 'center',
-                        width: '20px',
-                        height: '20px',
-                        borderRadius: '4px',
-                        background: 'var(--color-primary)',
-                        color: '#fff',
+                        width: '22px',
+                        height: '22px',
+                        borderRadius: 'var(--rounded-sm)',
+                        background: 'var(--color-primary-soft)',
+                        color: 'var(--color-primary)',
                         flexShrink: 0,
-                        marginTop: '2px'
+                        marginTop: '1px'
                       }}>
                         <Check size={14} strokeWidth={3} />
                       </span>
@@ -107,7 +117,15 @@ const Features = () => {
                     </li>
                   ))}
                 </ul>
-                <a href="#" className="btn-primary" style={{ borderRadius: 'var(--rounded-pill)' }}>
+                <a
+                  href="#contact"
+                  className="btn-secondary"
+                  style={{
+                    borderRadius: 'var(--rounded-md)',
+                    padding: '12px 24px',
+                    height: '44px'
+                  }}
+                >
                   Learn More
                 </a>
               </div>
@@ -116,7 +134,9 @@ const Features = () => {
                 <div style={{
                   borderRadius: 'var(--rounded-lg)',
                   overflow: 'hidden',
-                  background: 'var(--color-surface-card)'
+                  background: 'var(--color-surface-2)',
+                  border: '1px solid var(--color-border)',
+                  boxShadow: 'var(--shadow-sm)'
                 }}>
                   <img
                     src={feature.image}
@@ -135,7 +155,7 @@ const Features = () => {
           </div>
         </section>
       ))}
-    </>
+    </div>
   );
 };
 

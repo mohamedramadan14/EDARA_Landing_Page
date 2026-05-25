@@ -1,4 +1,3 @@
-import React from 'react';
 import { MessageCircle } from 'lucide-react';
 
 const WhatsAppButton = () => {
@@ -13,28 +12,29 @@ const WhatsAppButton = () => {
         bottom: '24px',
         right: '24px',
         zIndex: 999,
-        width: '56px',
-        height: '56px',
+        width: '52px',
+        height: '52px',
         borderRadius: 'var(--rounded-full)',
         background: '#25D366',
         color: '#fff',
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',
-        boxShadow: 'var(--shadow-md)',
-        transition: 'transform 0.2s, box-shadow 0.2s',
-        cursor: 'pointer'
+        boxShadow: '0 4px 16px rgba(37, 211, 102, 0.3)',
+        transition: 'transform 0.2s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.2s cubic-bezier(0.16, 1, 0.3, 1)',
+        cursor: 'pointer',
+        border: 'none'
       }}
       onMouseEnter={(e) => {
         e.currentTarget.style.transform = 'scale(1.1)';
-        e.currentTarget.style.boxShadow = '0 6px 16px rgba(0,0,0,0.2)';
+        e.currentTarget.style.boxShadow = '0 8px 24px rgba(37, 211, 102, 0.4)';
       }}
       onMouseLeave={(e) => {
         e.currentTarget.style.transform = 'scale(1)';
-        e.currentTarget.style.boxShadow = 'var(--shadow-md)';
+        e.currentTarget.style.boxShadow = '0 4px 16px rgba(37, 211, 102, 0.3)';
       }}
     >
-      <MessageCircle size={28} fill="white" />
+      <MessageCircle size={24} fill="white" />
     </a>
   );
 };
