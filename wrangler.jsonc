@@ -1,6 +1,6 @@
 {
   "$schema": "node_modules/wrangler/config-schema.json",
-  "name": "nova-hr-landing",
+  "name": "edara-landing",
   "compatibility_date": "2026-05-25",
   "assets": {
     "directory": "./dist",
